@@ -45,7 +45,7 @@ socket.onmessage = function(event) {
         if (json.name == "Mario" && json.topicType == "Topic" || json.name == "Luigi" && json.topicType == "Topic") {
             log.innerHTML +=
                 "<span class='alert alert-warning col-xs-12 col-sm-12' id='receivedMessage'>" +
-                "<div>" + json.data +
+                "<div>" + "You reveived : " + json.data +
                 "<div class='pull-right'>" +
                 "<button type='button' onclick='removeMessage()' class='btn btn-sm btn-danger'>" + "Remove" + "</button>" +
                 "</div>" +
@@ -54,7 +54,7 @@ socket.onmessage = function(event) {
         } else if (json.name == "Mario" && json.topicType == "Important" || json.name == "Luigi" && json.topicType == "Important") {
             log.innerHTML +=
                 "<span class='alert alert-danger col-xs-12 col-sm-12' id='receivedMessage'>" +
-                "<div>" + json.data +
+                "<div>" + "You received : " + json.data +
                 "<div class='pull-right'>" +
                 "<button type='button' onclick='removeMessage()' class='btn btn-sm btn-danger'>" + "Remove" + "</button>" +
                 "</div>" +
